@@ -26,30 +26,35 @@ public class MockDataProcess {
 
     @Scheduled(cron = "*/5 * * * * *")
     public void pushMetric() {
+        double random = Math.random();
         // 温度mock
+        double value = 40.0 - 0.5 + (Math.random() * 1.3);
         buildMessageAndPush(
                 ApplicationConstant.METRIC_TEMPERATURE,
                 ApplicationConstant.TEMPERATURE_THRESHOLD_UP,
                 ApplicationConstant.TEMPERATURE_THRESHOLD_DOWN,
-                20.1);
+                Math.round(value * 100.0) / 100.0);
         // 湿度mock
+        value = 70 - 0.5 + (Math.random() * 1.3);
         buildMessageAndPush(
                 ApplicationConstant.METRIC_HUMIDITY,
                 ApplicationConstant.HUMIDITY_THRESHOLD_UP,
                 ApplicationConstant.HUMIDITY_THRESHOLD_DOWN,
-                68.2);
+                Math.round(value * 100.0) / 100.0);
         // 压强mock
+        value = 1.0 - 0.05 + (Math.random() * 0.13);
         buildMessageAndPush(
                 ApplicationConstant.METRIC_PRESSURE_LEVEL,
                 ApplicationConstant.PRESSURE_LEVEL_THRESHOLD_UP,
                 ApplicationConstant.PRESSURE_LEVEL_THRESHOLD_DOWN,
-                1.1);
+                Math.round(value * 100.0) / 100.0);
         // 光照mock
+        value = 798.2 - 15 + (Math.random() * 30);
         buildMessageAndPush(
                 ApplicationConstant.METRIC_ILLUMINATION,
                 ApplicationConstant.ILLUMINATION_THRESHOLD_UP,
                 ApplicationConstant.ILLUMINATION_THRESHOLD_DOWN,
-                10.2);
+                Math.round(value * 100.0) / 100.0);
         // 电力-车床mock
         buildMessageAndPush(
                 ApplicationConstant.METRIC_ElEC_LATHE,
@@ -73,8 +78,8 @@ public class MockDataProcess {
                 ApplicationConstant.METRIC_ElEC_TRANSFORMER,
                 ApplicationConstant.ElEC_TRANSFORMER_THRESHOLD_UP,
                 ApplicationConstant.ElEC_TRANSFORMER_THRESHOLD_DOWN,
-                100.1);
-        // 电力-UPSmock
+                46.5);
+        // 电力-UPS mock
         buildMessageAndPush(
                 ApplicationConstant.METRIC_ElEC_UPS,
                 ApplicationConstant.ElEC_UPS_THRESHOLD_UP,

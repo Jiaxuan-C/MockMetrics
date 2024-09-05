@@ -19,17 +19,17 @@ public class ApplicationConstant {
 
 
     // 指标阈值
-    public static final Double  TEMPERATURE_THRESHOLD_UP = 10.0;
-    public static final Double  TEMPERATURE_THRESHOLD_DOWN = 30.0;
+    public static final Double  TEMPERATURE_THRESHOLD_UP = 40.0;
+    public static final Double  TEMPERATURE_THRESHOLD_DOWN = 10.0;
 
-    public static final Double  HUMIDITY_THRESHOLD_UP = 10.0;
+    public static final Double  HUMIDITY_THRESHOLD_UP = 70.0;
     public static final Double  HUMIDITY_THRESHOLD_DOWN = 30.0;
 
     public static final Double  PRESSURE_LEVEL_THRESHOLD_UP = 10.0;
-    public static final Double  PRESSURE_LEVEL_THRESHOLD_DOWN = 30.0;
+    public static final Double  PRESSURE_LEVEL_THRESHOLD_DOWN = 0.8;
 
-    public static final Double  ILLUMINATION_THRESHOLD_UP = 10.0;
-    public static final Double  ILLUMINATION_THRESHOLD_DOWN = 30.0;
+    public static final Double  ILLUMINATION_THRESHOLD_UP = 1500.0;
+    public static final Double  ILLUMINATION_THRESHOLD_DOWN = 500.0;
     public static final Double  ElEC_LATH_THRESHOLD_UP = 100.0;
     public static final Double  ElEC_LATH_THRESHOLD_DOWN = 0.0;
     public static final Double  ElEC_MILLING_THRESHOLD_UP = 100.0;
